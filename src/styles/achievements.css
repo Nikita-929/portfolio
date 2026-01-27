@@ -1,0 +1,113 @@
+/* Achievements Section */
+.achievements {
+  background: linear-gradient(180deg, rgba(255, 0, 110, 0.05) 0%, transparent 100%);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Achievement Card */
+.achievement-card {
+  background: rgba(0, 212, 255, 0.08);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 15px;
+  padding: 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.achievement-card:hover {
+  border-color: var(--primary-color);
+  background: rgba(0, 212, 255, 0.15);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 212, 255, 0.3);
+}
+
+/* Achievement Icon */
+.achievement-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  animation: scaleRotate 3s ease-in-out infinite;
+}
+
+@keyframes scaleRotate {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+/* Achievement Title */
+.achievement-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+/* Achievement Description */
+.achievement-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .achievement-card {
+    padding: 30px 25px;
+    border-radius: 12px;
+  }
+
+  .achievement-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+
+  .achievement-title {
+    font-size: 1.15rem;
+  }
+
+  .achievement-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .achievement-card {
+    padding: 25px 20px;
+  }
+
+  .achievement-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+
+  .achievement-title {
+    font-size: 1.05rem;
+  }
+
+  .achievement-description {
+    font-size: 0.85rem;
+  }
+}

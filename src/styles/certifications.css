@@ -1,0 +1,121 @@
+/* Certifications Section */
+.certifications {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 0, 110, 0.05) 100%);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Certification Card */
+.certification-card {
+  background: rgba(255, 190, 11, 0.08);
+  border: 2px solid rgba(255, 190, 11, 0.3);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certification-card:hover {
+  border-color: var(--accent-color);
+  background: rgba(255, 190, 11, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 190, 11, 0.2);
+}
+
+/* Certification Icon */
+.cert-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Certification Title */
+.cert-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Certification Issuer */
+.cert-issuer {
+  font-size: 1rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 190, 11, 0.4);
+}
+
+/* Certification Description */
+.cert-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .certification-card {
+    padding: 30px 25px;
+    border-radius: 12px;
+  }
+
+  .cert-icon {
+    font-size: 3rem;
+  }
+
+  .cert-title {
+    font-size: 1.15rem;
+  }
+
+  .cert-issuer {
+    font-size: 0.95rem;
+  }
+
+  .cert-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certification-card {
+    padding: 25px 20px;
+  }
+
+  .cert-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .cert-title {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .cert-issuer {
+    font-size: 0.85rem;
+  }
+}

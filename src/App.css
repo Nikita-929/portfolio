@@ -1,0 +1,32 @@
+/* App Container */
+.App {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glass Morphism Effect */
+@supports (backdrop-filter: blur(10px)) {
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Highlight Color */
+.highlight {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* Prevent layout shift on scroll */
+html {
+  scrollbar-gutter: stable;
+}
