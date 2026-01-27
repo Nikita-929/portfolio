@@ -42,13 +42,15 @@ function Navbar({ isDarkMode, onToggleDarkMode }) {
           className={`hamburger ${isOpen ? 'active' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
+          aria-controls="primary-navigation"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+        <ul id="primary-navigation" className={`nav-menu ${isOpen ? 'active' : ''}`}>
           {sections.map((section) => (
             <li key={section} className="nav-item">
               <ScrollLink

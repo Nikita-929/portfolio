@@ -173,14 +173,22 @@
     flex-direction: column;
     background-color: rgba(10, 10, 10, 0.98);
     gap: 0;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: opacity 0.2s ease, max-height 0.3s ease;
     padding: 0;
     border-bottom: 1px solid rgba(0, 212, 255, 0.2);
   }
 
   .nav-menu.active {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
     max-height: 400px;
     padding: 20px 0;
   }
