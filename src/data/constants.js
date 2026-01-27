@@ -14,11 +14,11 @@ import warehouseAbout from '../assets/warehouseManagementApp/about.png'
 
 
 
-export const RESUME_URL =
-  "https://drive.google.com/file/d/12t8Di3KQSbHAnzsDy9eikBWx8We3iHFQ/view?usp=sharing";
+export const RESUME_URL = "/Nikita_Mahato_resume.pdf";
 
 export const CERTIFICATE_URL =
   "https://drive.google.com/file/d/1o2qI3Nat-FHQoqCx6CsGviTIzEQ3o4Uu/view?usp=sharing";
+  
 
 /* =======================
    OVERVIEW

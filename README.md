@@ -17,6 +17,8 @@ React 18 + Vite 5 single‑page portfolio showcasing skills, projects, and exper
 ## Project Structure
 ```
 portfolio/
+├── public/
+│  ├── Nikita_Mahato_resume.pdf
 ├── src/
 │  ├── components/ (Overview, About, Skills, Projects, Experience, Certifications, Achievements, Contact, Navbar, BackToTop)
 │  ├── styles/ (css files per section + global.css, App.css)
